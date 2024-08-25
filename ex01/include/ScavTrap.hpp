@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 00:50:48 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 01:45:20 by amakela          ###   ########.fr       */
+/*   Updated: 2024/08/26 02:37:31 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ class ScavTrap : public ClapTrap {
         ScavTrap& operator=(const ScavTrap& obj);
         ~ScavTrap();
 
-        void guardGate();
+        void    attack(const std::string& target);
+        void    guardGate();
 };
 
 #endif

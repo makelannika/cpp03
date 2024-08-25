@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:11 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 01:58:47 by amakela          ###   ########.fr       */
+/*   Updated: 2024/08/26 02:39:21 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ int main() {
     alsoRob.takeDamage(bobby.getAttackDamage());
     std::cout << std::endl;
 
+    alsoSally.attack("Bobby");
+    bobby.takeDamage(alsoSally.getAttackDamage());
     alsoSally.guardGate();
     std::cout << std::endl;
     return (0);
