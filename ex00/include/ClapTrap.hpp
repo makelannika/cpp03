@@ -6,9 +6,12 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:26 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 00:25:57 by amakela          ###   ########.fr       */
+/*   Updated: 2024/08/26 01:32:58 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <string>
 #include <iostream>
@@ -33,3 +36,5 @@ class ClapTrap {
         void            setAttackDamage(unsigned int amount);
         unsigned int    getAttackDamage();
 };
+
+#endif
