@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:26 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 02:30:33 by amakela          ###   ########.fr       */
+/*   Updated: 2024/08/26 13:06:56 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ class ClapTrap {
 
     public:
         ClapTrap();
+        ~ClapTrap();
+
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap& obj);
+        
         ClapTrap& operator=(const ClapTrap& obj);
-        ~ClapTrap();
 
         void            attack(const std::string& target);
         void            takeDamage(unsigned int amount);
@@ -38,3 +40,4 @@ class ClapTrap {
 };
 
 #endif
+
