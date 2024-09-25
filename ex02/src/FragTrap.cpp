@@ -6,14 +6,17 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 12:31:03 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 12:56:11 by amakela          ###   ########.fr       */
+/*   Updated: 2024/09/26 01:37:18 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/FragTrap.hpp"
 
-FragTrap::FragTrap() {
+FragTrap::FragTrap() : ClapTrap() {
     std::cout << "FragTrap default constructor called" << std::endl;
+    hitPoints = 100;
+    energyPoints = 100;
+    attackDamage = 30;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
@@ -23,9 +26,8 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
     attackDamage = 30;
 }
 
-FragTrap::FragTrap(const FragTrap& obj) {
+FragTrap::FragTrap(const FragTrap& obj) : ClapTrap(obj) {
     std::cout << "FragTrap copy constructor called" << std::endl;
-    *this = obj;
 }
 
 FragTrap::~FragTrap() {
@@ -33,9 +35,9 @@ FragTrap::~FragTrap() {
 }
 
 FragTrap&   FragTrap::operator=(const FragTrap& obj) {
-    std::cout << "FragTrap copy assignment operator called" << std::endl;
     if (this != &obj)
         ClapTrap::operator=(obj);
+    std::cout << "FragTrap copy assignment operator called" << std::endl;
     return (*this);
 }
 

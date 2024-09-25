@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 12:31:14 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 13:07:33 by amakela          ###   ########.fr       */
+/*   Updated: 2024/09/26 01:37:43 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class FragTrap : public ClapTrap {
         FragTrap(std::string name);
         FragTrap(const FragTrap& obj);
 
-        FragTrap&   operator=(const FragTrap& obj);
+        FragTrap& operator=(const FragTrap& obj);
 
         void    attack(const std::string& target);
         void    highFivesGuys(void);

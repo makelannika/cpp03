@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:48 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 02:30:23 by amakela          ###   ########.fr       */
+/*   Updated: 2024/09/26 01:48:29 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 ClapTrap::ClapTrap() {
     std::cout << "ClapTrap default constructor called" << std::endl;
+    hitPoints = 10;
+    energyPoints = 10;
+    attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name) : name(name) {
@@ -66,7 +69,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
             "and lost " << amount << " points of health!" << std::endl;
         }
     } else
-        std::cout << "ClapTrap " << name << " is already dead" << std::endl;
+        std::cout << "ClapTrap " << name << " was attacked though it's already dead" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
@@ -74,18 +77,10 @@ void ClapTrap::beRepaired(unsigned int amount) {
         if (energyPoints) {
             energyPoints--;
             hitPoints += amount;
-            std::cout << "ClapTrap " << name << " regained "
+            std::cout << "ClapTrap " << name << " gained "
             << amount << " points of health!" << std::endl;
         } else
             std::cout << "ClapTrap " << name << " has no energy to repair itself" << std::endl;
     } else
         std::cout << "ClapTrap " << name << " is dead and can't be repaired anymore" << std::endl;
-}
-
-void    ClapTrap::setAttackDamage(unsigned int amount) {
-    attackDamage = amount;
-}
-
-unsigned int    ClapTrap::getAttackDamage() const{
-    return (attackDamage);
 }
