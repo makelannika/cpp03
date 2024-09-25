@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:26 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 13:06:34 by amakela          ###   ########.fr       */
+/*   Updated: 2024/09/25 23:50:15 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ class ClapTrap {
         void            attack(const std::string& target);
         void            takeDamage(unsigned int amount);
         void            beRepaired(unsigned int amount);
-        void            setAttackDamage(unsigned int amount);
-        unsigned int    getAttackDamage();
 };
 
 #endif
