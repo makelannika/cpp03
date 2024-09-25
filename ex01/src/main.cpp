@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:11 by amakela           #+#    #+#             */
-/*   Updated: 2024/08/26 02:39:21 by amakela          ###   ########.fr       */
+/*   Updated: 2024/09/26 01:26:53 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,53 +16,42 @@
 int main() {
     ClapTrap rob("Rob");
     ClapTrap bobby("Bobby");
-    ClapTrap alsoRob = rob;
+    std::cout << std::endl;
     ScavTrap sally("Sally");
-    ScavTrap alsoSally = sally;
+    std::cout << std::endl;
+    ScavTrap sophie;
+    std::cout << std::endl;
+    sophie = sally;
+    std::cout << std::endl;
+    ScavTrap selma(sophie);
     std::cout << std::endl;
 
-    alsoRob.setAttackDamage(2);
-    bobby.setAttackDamage(8);
-
-    alsoRob.attack("Bobby");
-    bobby.takeDamage(alsoRob.getAttackDamage());
-    alsoRob.attack("Bobby");
-    bobby.takeDamage(alsoRob.getAttackDamage());
-    alsoRob.attack("Bobby");
-    bobby.takeDamage(alsoRob.getAttackDamage());
-    std::cout << std::endl;
-
-    bobby.beRepaired(6);
-    bobby.attack("Rob");
-    alsoRob.takeDamage(bobby.getAttackDamage());
-    std::cout << std::endl;
-
-    alsoRob.beRepaired(2);
-    alsoRob.beRepaired(2);
-    alsoRob.beRepaired(2);
-    alsoRob.beRepaired(2);
+    rob.attack("Bobby");
+    bobby.takeDamage(0);
     std::cout << std::endl;
 
     bobby.attack("Rob");
-    alsoRob.takeDamage(bobby.getAttackDamage());
+    rob.takeDamage(0);
     std::cout << std::endl;
 
-    alsoRob.beRepaired(2);
-    alsoRob.beRepaired(2);
-    alsoRob.beRepaired(2);
-    alsoRob.beRepaired(2);
-    alsoRob.attack("Bobby");
+    sally.attack("Rob");
+    rob.takeDamage(20);
     std::cout << std::endl;
 
-    bobby.attack("Rob");
-    alsoRob.takeDamage(bobby.getAttackDamage());
-    bobby.attack("Rob");
-    alsoRob.takeDamage(bobby.getAttackDamage());
+    bobby.beRepaired(3);
+    bobby.beRepaired(3);
+    bobby.beRepaired(3);
+    bobby.beRepaired(3);
     std::cout << std::endl;
 
-    alsoSally.attack("Bobby");
-    bobby.takeDamage(alsoSally.getAttackDamage());
-    alsoSally.guardGate();
+    sally.attack("Bobby");
+    bobby.takeDamage(20);
+    sally.attack("Bobby");
+    bobby.takeDamage(20);
+    std::cout << std::endl;
+
+    sally.guardGate();
+    selma.guardGate();
     std::cout << std::endl;
     return (0);
 }
