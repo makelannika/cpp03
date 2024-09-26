@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:11 by amakela           #+#    #+#             */
-/*   Updated: 2024/09/26 01:26:53 by amakela          ###   ########.fr       */
+/*   Updated: 2024/09/27 00:41:37 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,16 @@ int main() {
     ClapTrap rob("Rob");
     ClapTrap bobby("Bobby");
     std::cout << std::endl;
+
     ScavTrap sally("Sally");
     std::cout << std::endl;
+
     ScavTrap sophie;
     std::cout << std::endl;
+
     sophie = sally;
     std::cout << std::endl;
+    
     ScavTrap selma(sophie);
     std::cout << std::endl;
 
