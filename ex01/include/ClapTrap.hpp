@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:26 by amakela           #+#    #+#             */
-/*   Updated: 2024/09/27 00:38:42 by amakela          ###   ########.fr       */
+/*   Updated: 2024/09/27 00:42:38 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ClapTrap {
 
     public:
         ClapTrap();
-        ~ClapTrap();
+        virtual ~ClapTrap();
 
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap& obj);
