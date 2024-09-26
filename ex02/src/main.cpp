@@ -6,7 +6,7 @@
 /*   By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 12:50:11 by amakela           #+#    #+#             */
-/*   Updated: 2024/09/26 01:52:07 by amakela          ###   ########.fr       */
+/*   Updated: 2024/09/27 00:35:39 by amakela          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main() {
     ScavTrap sally("Sally");
     FragTrap fred("Fred");
     FragTrap alsoFred(fred);
+    ClapTrap *ptr = &sally;
     std::cout << std::endl;
 
     bobby.attack("Sally");
@@ -26,7 +27,7 @@ int main() {
     std::cout << std::endl;
 
     bobby.beRepaired(15);
-    sally.attack("Bobby");
+    ptr->attack("Bobby");
     bobby.takeDamage(20);
     std::cout << std::endl;
 
