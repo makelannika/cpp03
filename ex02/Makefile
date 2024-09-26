@@ -6,11 +6,11 @@
 #    By: amakela <amakela@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/26 12:28:41 by amakela           #+#    #+#              #
-#    Updated: 2024/09/27 00:25:30 by amakela          ###   ########.fr        #
+#    Updated: 2024/09/27 00:45:53 by amakela          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	FragTrap
+NAME		=	fragTrap
 
 CPPFILES	=	src/main.cpp		src/ClapTrap.cpp	src/ScavTrap.cpp	\
 				src/FragTrap.cpp
